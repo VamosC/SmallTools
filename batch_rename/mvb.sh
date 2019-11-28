@@ -1,13 +1,13 @@
 #!/bin/bash
-if [ $# != 2 ]
+if [ $# != 3 ]
 then
-	echo "usage: mvb source target
-       bash mvb.sh jpg jpeg"
+	echo "usage: mvb directory source target
+       bash mvb.sh . jpg jpeg"
 	exit -1
 fi
-for name in `ls *.$1`
+for name in `ls $1/*.$2`
 do
-	echo "$name -> ${name%.$1}.$2"
-	mv $name ${name%.$1}.$2
+	echo "$name -> ${name%.$2}.$3"
+	mv $name ${name%.$2}.$3
 done
 

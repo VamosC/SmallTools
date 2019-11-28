@@ -12,7 +12,7 @@ then
 	exit -1
 fi
 
-bash ../mvb.sh txt md
+bash ../mvb.sh . txt md
 replaced_files=()
 count1=0
 for name in `ls *.md`
@@ -42,7 +42,7 @@ else
 	done
 fi
 echo "=========test-pass========="
-bash ../mvb.sh md txt
+bash ../mvb.sh . md txt
 
 
 
